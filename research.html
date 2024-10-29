@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Political Research - Political Engagement Hub</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .navbar {
+            background: #2c3e50;
+            color: #ffffff;
+            padding: 40px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            padding-left: 20px;
+            float: left;
+        }
+
+        .nav-links {
+            list-style: none;
+            float: right;
+            padding-right: 20px;
+        }
+
+        .nav-links li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .nav-links a:hover {
+            background: #1abc9c;
+            border-radius: 5px;
+        }
+
+        .hero {
+            background: url('https://cdn.prod.website-files.com/5fa4da31b6c3a45d2cfd2d5d/651c001da682b97ebfc48be0_Increase%20in%20Social%20Media%20Use%20Spurring%20Youth%20Political%20Engagement%20.jpg') no-repeat center center/cover;
+            color: #ffffff;
+            text-align: center;
+            padding: 200px 20px;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            margin: auto;
+            background: rgba(51, 51, 51, 0.8);
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #1abc9c;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background: #16a085;
+        }
+
+        .info-container {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        .info {
+            max-width: 800px;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background: #2c3e50;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .search-bar {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .search-bar input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background: #1abc9c;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background: #16a085;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                float: none;
+                text-align: center;
+            }
+            .nav-links li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="logo">Engage Politically</h1>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#resources">Resources</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h2>Political Research</h2>
+            <p>Find in-depth information about political issues and representatives.</p>
+        </div>
+    </header>
+
+    <section class="content">
+        <h2>Search for Political Information</h2>
+        <p>Use the search bar below to look up information on Ballotpedia:</p>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Enter a topic or representative's name...">
+            <button onclick="performSearch()">Search</button>
+        </div>
+
+        <div class="info-container">
+            <div class="info">
+                <p>Political research is essential for understanding the policies, representatives, and issues that affect our communities. By staying informed, you can make educated choices and advocate for what you believe in. Use trusted sources, compare perspectives, and dig deeper into the historical context behind current events to develop a well-rounded understanding of the political landscape.</p>
+                <br>
+                <p>Understanding the key political issues helps you become an active participant in democracy. Research can reveal the underlying values of different political ideologies and the impact of proposed policies. Knowledge of candidates’ platforms and voting records also allows you to hold them accountable. By staying informed, you’re taking the first step toward meaningful civic engagement.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need further information, feel free to reach out!</p>
+        <p>Email: <a href="mailto:info@politicalhub.com">info@politicalhub.com</a></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function performSearch() {
+            var query = document.getElementById("searchInput").value;
+            if (query) {
+                window.location.href = "https://ballotpedia.org/wiki/index.php?search=" + encodeURIComponent(query);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Political Concepts Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .result {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Political Concepts Quiz</h1>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. What is the main purpose of a constitution?</p>
+                <label><input type="radio" name="q1" value="a"> a) To establish laws</label>
+                <label><input type="radio" name="q1" value="b"> b) To create a government</label>
+                <label><input type="radio" name="q1" value="c"> c) To protect individual rights</label>
+                <label><input type="radio" name="q1" value="d"> d) All of the above</label>
+            </div>
+            <div class="question">
+                <p>2. What is the term for the division of government into three branches?</p>
+                <label><input type="radio" name="q2" value="a"> a) Checks and Balances</label>
+                <label><input type="radio" name="q2" value="b"> b) Federalism</label>
+                <label><input type="radio" name="q2" value="c"> c) Separation of Powers</label>
+                <label><input type="radio" name="q2" value="d"> d) Judicial Review</label>
+            </div>
+            <div class="question">
+                <p>3. Which amendment abolished slavery in the United States?</p>
+                <label><input type="radio" name="q3" value="a"> a) 13th Amendment</label>
+                <label><input type="radio" name="q3" value="b"> b) 14th Amendment</label>
+                <label><input type="radio" name="q3" value="c"> c) 15th Amendment</label>
+                <label><input type="radio" name="q3" value="d"> d) 16th Amendment</label>
+            </div>
+            <button type="button" id="submitBtn">Submit</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+    <script>
+        const correctAnswers = {
+            q1: "d",
+            q2: "c",
+            q3: "a"
+        };
+
+        document.getElementById("submitBtn").addEventListener("click", () => {
+            let score = 0;
+            const form = document.getElementById("quizForm");
+            const totalQuestions = Object.keys(correctAnswers).length;
+
+            for (let question in correctAnswers) {
+                const userAnswer = form[question].value;
+                if (userAnswer === correctAnswers[question]) {
+                    score++;
+                }
+            }
+
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = `You scored ${score} out of ${totalQuestions}.`;
+        });
+    </script>
+</body>
+</html>

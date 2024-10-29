@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Political Engagement Hub</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .navbar {
+            background: #2c3e50;
+            color: #ffffff;
+            padding: 40px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            padding-left: 20px;
+            float: left;
+        }
+
+        .nav-links {
+            list-style: none;
+            float: right;
+            padding-right: 20px;
+        }
+
+        .nav-links li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .nav-links a:hover {
+            background: #1abc9c;
+            border-radius: 5px;
+        }
+
+        .hero {
+            background: url('https://cdn.prod.website-files.com/5fa4da31b6c3a45d2cfd2d5d/651c001da682b97ebfc48be0_Increase%20in%20Social%20Media%20Use%20Spurring%20Youth%20Political%20Engagement%20.jpg') no-repeat center center/cover;
+            color: #ffffff;
+            text-align: center;
+            padding: 400px 20px;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            margin: auto;
+            border-radius: 20px;
+            background: rgba(51, 51, 51, 0.8);
+            padding: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #1abc9c;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background: #16a085;
+        }
+
+        .resources, .events, .preparedness, footer {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            flex: 1 1 calc(50% - 40px);
+            max-width: 400px;
+        }
+
+        .card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: #ffffff;
+            padding: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                float: none;
+                text-align: center;
+            }
+            .nav-links li {
+                display: block;
+                margin: 10px 0;
+            }
+            .card-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card {
+                flex: 1 1 90%;
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="logo">Engage Politically</h1>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#resources">Resources</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <h2>Welcome to Your Political Engagement Hub</h2>
+            <p>Stay informed, get involved, and make your voice heard.</p>
+            <a href="#resources" class="btn">Get Started</a>
+        </div>
+    </header>
+
+    <section class="resources" id="resources">
+        <h2>Resources</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="https://cdn.townweb.com/armstrongcreek.org/wp-content/uploads/2022/08/VOTE-1.jpg" alt="Voter Registration">
+                <h3>Voter Registration</h3>
+                <p>Register to vote and learn about the voting process.</p>
+                <a href="vote.html" target="_blank" class="btn">Register Now</a>
+            </div>
+            <div class="card">
+                <img src="https://img.freepik.com/free-vector/flat-design-usa-election-campaign-scenes_52683-48400.jpg" alt="Political Events">
+                <h3>Political Events</h3>
+                <p>Find local political engagement events near you.</p>
+                <a href="events.html" target="_blank" class="btn">Find Events</a>
+            </div>
+            <div class="card">
+                <img src="https://media.istockphoto.com/id/1363841854/vector/woman-with-laptop-working-in-internet.jpg?s=612x612&w=0&k=20&c=FkuGR7Zq3lvuowtLn32Z7pkAHUnp9M2xtNuq75MRu4U=" alt="Research Sources">
+                <h3>Research Sources</h3>
+                <p>Access valuable information on candidates and policies.</p>
+                <a href="research.html" target="_blank" class="btn">Explore Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="card-container" id="preparedness">
+        <div class="card">
+            <h3>Political Preparedness</h3>
+            <p>Take the time to assess your knowledge and preparedness for the upcoming election.</p>
+            <a href="quiz.html" class="btn">Take the Quiz</a>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need further information, feel free to reach out!</p>
+        <p>Email: <a href="mailto:info@politicalhub.com">info@politicalhub.com</a></p>
+    </footer>
+</body>
+</html>
